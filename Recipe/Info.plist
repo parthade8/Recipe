@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FloryannaDemo-pnlK.ttf</string>
+		<string>Pacifico-Regular.ttf</string>
+		<string>Monoton-Regular.ttf</string>
+		<string>GoldropspersonaluseRegular-9Ynn5.otf</string>
+		<string>AmazonicPersonalUseBold-eZKGn.ttf</string>
+		<string>NinjaNaruto-YOn4.ttf</string>
+		<string>Tomatoes-O8L8.ttf</string>
+		<string>Idautomationhc39m-raq9.ttf</string>
+		<string>BanksMilesSingleLine-11B4.ttf</string>
+	</array>
+</dict>
+</plist>

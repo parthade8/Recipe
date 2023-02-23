@@ -6,47 +6,59 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct Dashboard: View{
+    
+    @State var selectCategory: CategoryModel?
+    var foodCategory: String { selectCategory?.strCategory ?? "Beef"}
     var body: some View{
-        NavigationView{
-            ScrollView(.horizontal){
-                HStack{
+        NavigationView {
+            VStack(alignment: .leading){
+                ScrollView(showsIndicators: false){
                     
+                    ScrollView(.horizontal, showsIndicators: false){
+                        CategoryDashboardView(selectedCategory: $selectCategory)
+                            .padding(.leading)
+                            .frame(height: 150)
+                    }
+                    Text("\(foodCategory) Meals")
+                        .font(.bold(.title)())
+                        .padding(.leading)
+                    
+                    
+                    SubCategoryDashboardView(viewModel: SubCategoryListViewModel(selectedCategoryName: foodCategory))
                 }
             }.navigationTitle("Today's Recipes 🔥")
         }
+        
     }
 }
 
 
+
 struct recipeDashboardView: View {
+    @State var selectedCategory: CategoryModel?
     var body: some View {
-        NavigationView{
-            TabView{
-                Dashboard()
-                    .tabItem{
-                        Image(systemName: "house")
-                    }
-                Text("Bookmark")
-                    .tabItem{
-                        Image(systemName: "bookmark")
-                    }
-                Profile()
-                    .tabItem{
-                        Image(systemName: "person")
-                    }
-            }
-        }
-        ScrollView(.horizontal){
-            HStack{
-                
-            }.navigationTitle("Today's Recipes🔥")
-            Spacer()
+        TabView{
+            Dashboard()
+                .tabItem{
+                    Image(systemName: "house")
+                }
+            Text("Bookmark")
+                .tabItem{
+                    Image(systemName: "bookmark")
+                }
+            Profile()
+                .tabItem{
+                    Image(systemName: "person")
+                }
         }
     }
     
 }
+
+
 
 
 struct recipeDashboardView_Previews: PreviewProvider {
