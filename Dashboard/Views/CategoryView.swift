@@ -25,6 +25,7 @@ struct CategoryItem: View{
             .clipShape(Circle())
             
             Text(model.strCategory)
+                .font(Font.custom("Pacifico", size: 12))
         }.background(RoundedRectangle(cornerRadius: 8)
             .stroke(lineWidth: 2))
     }

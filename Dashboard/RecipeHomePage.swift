@@ -16,7 +16,7 @@ struct RecipeHomePage: View {
                 Image("salad")
                     .resizable()
                     .ignoresSafeArea()
-                NavigationLink(destination: recipeDashboardView()) {
+                NavigationLink(destination: LoginViewPage()) {
                     Text("RECIPE")
                         .foregroundColor(.red)
                         .font(Font.custom("Monoton", size: 80))

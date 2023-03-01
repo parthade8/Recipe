@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-
 struct SubCategoryView: View{
     
     let subModel: SubCategoryModel
@@ -21,10 +20,11 @@ struct SubCategoryView: View{
             }placeholder: {
                 Color.blue.opacity(0.1)
             }
-            .frame(width: 350, height: 180)            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .frame(width: 350, height: 180)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
             Text(subModel.strMeal)
                 .foregroundColor(.white)
-                .font(Font.custom("Pacifico", size: 17))
+                .font(.bold(Font.custom("pacifico", size: 20))())
                 .padding(.leading,10)
         }.background(RoundedRectangle(cornerRadius:8)
             .stroke(lineWidth: 2))
